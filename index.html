@@ -1,350 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recorded Videos</title>
+    <title>Trading Learning</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        html, body {
+            height: 100%;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: sans-serif;
+            background-image: url(2.jpg); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
         }
 
         header {
-            background-color: #f1800e;
+            background-color: #4CAF50; /* Header background color */
             color: white;
+            padding-bottom: px;
             text-align: center;
-            padding: 20px 0;
-            text-decoration: underline;
-            font-size: 24px;
         }
 
-        .search-container {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .search-container input[type="text"] {
+        nav {
+            background-color: #333; /* Navigation background color */
+            color: #fff;
             padding: 10px;
-            width: 80%;
-            max-width: 400px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            font-size: 16px;
+            text-align: center;
         }
-        
 
-        .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+        }
+
+        main {
             padding: 20px;
+            flex: 1; /* Allow main to grow and take available space */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center main content */
         }
 
-        .video-card {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-
-        video {
-            width: 100%;
-            height: auto;
-        }
-
-        .title {
-            padding: 10px;
-            font-size: 18px;
+        footer {
+            background-color: #333; /* Footer background color */
+            color: #fff;
             text-align: center;
-            background-color: #f9f9f9;
+            padding: 10px;
         }
-        .hidden {
-            display: none;
+        h2 {
+            color: #ffffff;
         }
-
+        h3 {
+            color: #c93434;
+        }
+        p {
+            color: #88ff00;
+        }
+        div{
+            padding-right: 1500px;
+        }
+      
     </style>
 </head>
-
 <body>
-    <header>My Recorded Videos</header>
-    <!-- Search Box -->
-    <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search for videos..." onkeyup="searchVideos()">
-    </div>
-    <div class="container">
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/ph24jfchco2g9qff4sqnr/volume-theory-deep-learning-Live-nifty-50-26102024-BANKNIFTY-nifty-nifty50-intradaytrading.mp4?rlkey=2apl6p3kco6mxkll0ut9mi757&st=rmf1uwc4&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">volume-theory-deep-learning-Live-nifty-50-26102024-BANKNIFTY-nifty-nifty50-intradaytrading</div>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
 
-        </div>
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/87f8kcpwdbb3jhv1gtb4l/19-10-2024-backtest-3.04.05.0-volume-theory.mp4?rlkey=1vg4posb6x9ptuq4tdmq2rzic&st=elmzrg2g&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">19-10-2024 backtest 3.04.05.0 volume theory</div>
-
-        </div>
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/xzaa9oxsh4dz3lut6gpas/3.0-4.0-5.0-volume-theroy-with-backtesting.mp4?rlkey=brxap63bu010h5g3s6nza4gfh&st=lug17hiv&dl=1" controls controlsList="nodownload"></video>
-            <div class="title">3.0,4.0,5.0, volume theory with backtesting</div>
-        </div>
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/fgu1wj42gguu3nkab70wf/4.05.0-Doubt-class-in-details-Live-nifty-50-21092024.mp4?rlkey=igy6azzsfytqnuhkv3uf59ov1&st=5e3fnhx0&dl=1" controls controlsList="nodownload"></video>
-            <div class="title">4.0 5.0 Doubt Class in Details Live Nifty 50 21-09-2024</div>
-        </div>
-        <!-- Add more video cards as needed -->
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/lhg3o5w4kyps6rax80q0b/4.05.0-volume-theory-05102024-backbacktesting.mp4?rlkey=4tl509bful8b75w8t3p9oqfwz&st=19wccq6e&dl=1" controls controlsList="nodownload"></video>
-            <div class="title">4.0 5.0 volume theory 05-10-2024 backtesting</div>
-        </div>
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/cqi4eypajiahjgm0659qf/4-magical-line-concept-with-5.0-Live-nifty-50-fully-explain-nifty-nifty50-intradaytrading.mp4?rlkey=56hgwohtf53mht6p5dcjdz1ua&st=j3suz1f3&dl=1" controls controlsList="nodownload"></video>
-            <div class="title">4 magical line concept with 5.0 Live nifty 50 fully explain  nifty nifty50 intradaytrading</div>
-        </div>
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/5ishu486utchlvomh4ktu/12-05-2024-MMA-INDICATOR-AND-BACKTESTING.mp4?rlkey=4dmff8oyh5k6ap7jxvsqoyuc5&st=kao68g6q&dl=1" controls controlsList="nodownload"></video>
-            <div class="title">12-05-2024  MMA INDICATOR AND BACKTESTING.mp4</div>
-        </div>
-<!-- <div class="video-card">
-            <video src=""controls controlsList="nodownload"></video>
-            <div class="title"></div>
-
-        </div> -->
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/jg939bga15vk0ebxkxcev/14-09-2024-sat-backtesting-with-4.0-5.0.mp4?rlkey=2g4mh4j6jpdvyns4o1c4vg00b&st=kad1xk3u&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">14-09-2024 sat backtesting with 4.0 5.0</div>
-
-        </div>
-
+    <nav>
+        <a href="https://sarthak3851.github.io/imp/">IMP videos</a>
+        <a href="https://sarthak3851.github.io/all/">All videos</a>
         
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/wmc8rk6v8yfv1i08ftkc3/20-07-2024-backtesting-class-4.0-BANKNIFTY-nifty-nifty50-intradaytrading.mp4?rlkey=727gaqu5k4nmut4ht0ihsw69x&st=xymt5nzh&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">20-07-2024 backtesting class 4.0  BANKNIFTY nifty nifty50 intradaytrading</div>
-
-        </div>
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/08wxyxc1isb3tiw83bsx3/24-08-2024-sat-backtest-class-4.0-5.0-Live-nifty-50-Trading-BANKNIFTY-nifty.mp4?rlkey=v6fnia0j4ujg4roanonz5kutg&st=dt5uhssy&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">24-08-2024 sat backtest class 4.0-5.0  Live nifty 50 Trading  BANKNIFTY nifty</div>
-
-        </div>
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/f3xa7tu3rg7lvl5e4z7o6/28-09-2024-doubt-class-video-no-2.mp4?rlkey=tb3joily8a4r4kj9czv6pc8n8&st=9emww48u&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">28-09-2024 doubt class video no 2</div>
-
-        </div>
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/1aev7r6mmro3bwl8s334t/29-03-2024-BACKTESTING-CLASS-1-Live-nifty-50-Trading-BANKNIFTY-nifty-nifty50-intradaytrading.mp4?rlkey=19msqb10eq6xf59ukvnio44zy&st=au44vnpk&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">29-03-2024 BACKTESTING CLASS 1 Live nifty 50 Trading  BANKNIFTY nifty nifty50 intradaytrading</div>
-
-        </div>
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/kb229a9zsnxoveonmewwg/31-08-2024-how-to-trade-in-intraday-with-4.0-5.0-BANKNIFTY-nifty-nifty50-intradaytrading.mp4?rlkey=ctla5o4osckaptvujwdoh4muv&st=yj0hcyj5&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">31-08-2024 how to trade in intraday with 4.0-5.0  BANKNIFTY nifty nifty50 intradaytrading</div>
-
-        </div>
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/zsq1rymlzelb2d2r8pt4e/backtesting-class-27-07-2024.mp4?rlkey=sij84kxpuy8vemmajcuc4nyqk&st=mdm7lpb0&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">backtesting class 27-07-2024</div>
-
-        </div>
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/51jiysf37oi8mq3auhmwx/BACKTESTING-CLASS-WEEKLY-22-06-2024-Live-nifty-50-Trading-BANKNIFTY-nifty-nifty50.mp4?rlkey=16yxuu6hj2e2leml8w72ai1xr&st=h4i0elfn&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">BACKTESTING CLASS WEEKLY 22-06-2024 Live nifty 50 Trading  BANKNIFTY nifty nifty50</div>
-
-        </div>
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/tbceaucrh8oxcpp6cxezs/DOUBT-CLASS-23032024-BANKNIFTY-nifty-nifty50-intradaytrading.mp4?rlkey=rfprcbvoaywt7wgyb85ilkeaz&st=9uxepcdo&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">DOUBT CLASS 23-03-2024 BANKNIFTY nifty nifty50 intradaytrading</div>
-
-        </div>
-        
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/78mrdm8cofk06ivnkbaj5/ema-stratergy-zoom-class.mp4?rlkey=pufl8mgsz4j91yco6unowg74h&st=kxaaokge&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">EMA stratergy zoom class</div>
-
-        </div>
-
-        
-        <!-- <div class="video-card"> -->
-            <!-- <video src="LIVE CLASS ZOOM EMA STRATGY _ #BANKNIFTY #nifty #nifty50 #intradaytrading.mp4"controls controlsList="nodownload"></video> -->
-            <!-- <div class="title">LIVE CLASS ZOOM EMA STRATGY  #BANKNIFTY #nifty #nifty50 #intradaytrading</div> -->
-
-        <!-- </div> -->
-
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/ppx9aatagt4fy63f0kcfa/FUTURE-SELLING-STRATGY.mp4?rlkey=s91vouwwox7jf7e0lxri5g5gm&st=hh8lo55j&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">FUTURE SELLING STRATGY</div>
-
-        </div>
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/k73hulsgzchaxlrwfhbge/IMP-SUBSCENARIO-CHANCES-Live-nifty-50-Trading-BANKNIFTY-nifty-nifty50-intradaytrading.mp4?rlkey=spugm5szyc7xss1v01km27ogb&st=l61ta5n3&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">IMP SUBSCENARIO CHANCES Live nifty 50 Trading  BANKNIFTY nifty nifty50 intradaytrading</div>
-
-        </div>
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/ok784k3aknt32m97n3esb/mera-mood-index-urf-2.55-post-market.mp4?rlkey=kuiduo1wihxbviozjuo9ji91i&st=pmcwbe9a&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">mera mood index urf 2.55 post market</div>
-
-        </div>
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/80vgb4xw3v0d7gdx8f6m5/POST-MARKET-ANALYSIS-4.0-12-06-2024.mp4?rlkey=k061ytx4mr7c3gctmsey2fe8w&st=aodhayfs&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">POST MARKET ANALYSIS 4.0 12-06-2024</div>
-
-        </div>
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/ub3zy52cdebbivrcryqqo/RSI-SETUP-ZOOM-29-03-2024.mp4?rlkey=qo7rwrleny3vt7n6s6vtco7t9&st=xzz7ft2e&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">RSI SETUP ZOOM 29-03-2024</div>
-
-        </div>
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/0wic06c0lpmdcw249wn88/sat-backtest-class-4.0-5.0-21-09-2024-Live-nifty-50-BANKNIFTY-nifty-nifty50-intradaytrading.mp4?rlkey=vb30iv2ipo6cuktwwwc7g2qnr&st=2otgieff&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">sat backtest class 4.0 5.0 21-09-2024 Live nifty 50   BANKNIFTY nifty nifty50 intradaytrading</div>
-
-        </div>
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/x0va4j5251tb7zhnqbzxh/sat-backtest-class-10-08-2024-Live-nifty-50-Trading-BANKNIFTY-nifty-nifty50-intradaytrading.mp4?rlkey=q9htan86khwmcyjj8faysjyfn&st=da0j63t1&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">sat backtest class 10-08-2024 Live nifty 50 Trading  BANKNIFTY nifty nifty50 intradaytrading</div>
-
-        </div>
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/6g021eyo4ocq8crv5tue6/stock-learning-4.0.mp4?rlkey=2veh39m39uv8wm6ylbwhsoaex&st=mk1jxfud&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">stock learning 4.0</div>
-
-        </div>
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/lqjrvya06vkj0xprk9fl3/volume-theory-and-4.0-5.0-BANKNIFTY-nifty-nifty50-intradaytrading.mp4?rlkey=boddp7lawey694y71h0xjt28a&st=mbr3vtbl&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">volume theory and 4.0,5.0  BANKNIFTY nifty nifty50 intradaytrading</div>
-
-        </div>
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/akmoaej3pvzqadr5tvhge/Y2meta.app-backtesting-class-27_07_2024.mp4?rlkey=nlbsg8be7z2ayxg5mtijo7i03&st=1pqifaxe&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">backtesting class 27-07-2024.mp4</div>
-
-        </div>
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/2svee1jgdb9czhroxecqn/zoom-backtesing-class-04-07-2024-expiry-Live-nifty-50-Trading.mp4?rlkey=yz06awiqc8hdvr7q7do5bx6j1&st=93nase2p&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">zoom backtesing class 04-07-2024 expiry Live nifty 50 Trading</div>
-
-        </div>
-
-        <!-- <div class="video-card"> -->
-            <!-- <video src="https://www.dropbox.com/scl/fi/id5pc22usblbfobh0tyud/ZOOM-POST-MARKET-01_02_2024-Live-nifty-50-Trading-_-BANKNIFTY-nifty-nifty50-intradaytrading.mp4?rlkey=8rfsb7prcyquu37e9cii9rife&st=44llp3ot&dl=1"controls controlsList="nodownload"></video> -->
-        <!-- </div class="title">ZOOM POST MARKET 01_02_2024 Live nifty 50 Trading _ #BANKNIFTY #nifty #nifty50 #intradaytrading</div> -->
-
-        
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/rx1vxlj918994ion75smy/zoom-post-market-4.0-07-06-2024.mp4?rlkey=pmuj5hc8ftqillhwr1y19qxpu&st=ujggiqfe&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">zoom post market 4.0 07-06-2024</div>
-
-        </div> 
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/oguw5najzetyvrojnlvni/ZOOM-POST-MARKET-4.0-10-06-2024.mp4?rlkey=k3iqp4tmq5tmge9dz5bf9rs0h&st=aa7jixe6&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">ZOOM POST MARKET 4.0 10-06-2024</div>
-
-        </div> 
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/n6wroeyl94u7n4jb2ajqw/ZOOM-POST-MARKET-28-05-2024-4.0-Live-nifty-50-nifty-nifty50-intradaytrading.mp4?rlkey=l4nvri1c082hi5ct5jncqej08&st=zhamd41c&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">ZOOM POST MARKET 28-05-2024  4.0 Live nifty 50 nifty nifty50 intradaytrading</div>
-
-        </div> 
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/uyuf4ztkeo7u79czpruw2/ZOOM-SATURDAY-CLASS-08-06-2024-INDEX-AND-STOCK-LEARNING-Live-nifty-50-Trading.mp4?rlkey=r4p4b0icwknkkl9d1kzsir13a&st=fjg0lqrp&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">ZOOM SATURDAY CLASS 08-06-2024 INDEX AND STOCK LEARNING Live nifty 50 Trading</div>
-
-        </div> 
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/vq2wkjmbcnqw98b60bukl/what-is-foc-how-to-use.mp4?rlkey=akwtbrq2qc7cu6q99b42h22fc&st=kyfhvm87&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">What is foc? how to use tutorial</div>
-
-        </div> 
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/if89w9kiy41ch3nm41n1t/IMP-entry-exit-and-live-maket-Live-nifty-50-Trading-BANKNIFTY-nifty-nifty50-intradaytrading.mp4?rlkey=ft003l0cblc39kw8vw5kuqzfx&st=tvfnk9hb&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">IMP entry exit and live maket Live nifty 50 Trading  BANKNIFTY nifty nifty50 intradaytrading</div>
-
-        </div> 
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/2zhgqrjd1q54nqy8cggjq/IMP-PART-1-PPT-10-02-2024-Live-nifty-50-Trading-BANKNIFTY-nifty-nifty50-intradaytrading.mp4?rlkey=vgx945wnv2bmibe1s0ij533yz&st=za5m2bye&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">IMP PART 1  PPT 10-02-2024  Live nifty 50 Trading  BANKNIFTY nifty nifty50 intradaytrading</div>
-
-        </div> 
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/9d0au684gut79un5ji8ve/PPT-PART-2-IMP-10022024-Live-nifty-50-Trading-BANKNIFTY-nifty-nifty50-intradaytrading.mp4?rlkey=nxkwkn37w51yhyknzlhraw9qp&st=vvpk0m1i&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">PPT PART 2 IMP 10022024 Live nifty 50 Trading  BANKNIFTY nifty nifty50 intradaytrading</div>
-
-        </div> 
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/ghgswwth14mxlggnuffcq/ZOOM-OPTION-SELLING-PART-1-Live-nifty-50-Trading-BANKNIFTY-nifty-nifty50-intradaytrading.mp4?rlkey=fgknh2v8rytf9muryykqcjiwu&st=654pnqe6&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">ZOOM OPTION SELLING PART 1 Live nifty 50 Trading  BANKNIFTY nifty nifty50 intradaytrading</div>
-        </div> 
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/neqh8qoooep4v3h9muq94/SELLING-PART-2-RSI-SETUP-Live-nifty-50-Trading-BANKNIFTY-nifty-nifty50-intradaytrading.mp4?rlkey=w2qi8004gp9wra6r4n3hsnl9d&st=2ixec73n&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">SELLING PART 2 RSI SETUP Live nifty 50 Trading  BANKNIFTY nifty nifty50 intradaytrading</div>
-
-        </div> 
-
-        <div class="video-card">
-            <video src="https://www.dropbox.com/scl/fi/lk8zdc0nbkzlbvyb8ri3u/SELLING-PART-3-EVENT-TRADING-AND-SELL-STRATGY-Live-nifty-50-Trading-BANKNIFTY-nifty-nifty50.mp4?rlkey=go8gm3q6gswlgjrzx24qfzlys&st=tklhierb&dl=1"controls controlsList="nodownload"></video>
-            <div class="title">SELLING PART 3 EVENT TRADING AND SELL STRATGY Live nifty 50 Trading  BANKNIFTY nifty nifty50</div>
-
-        </div> 
-
-        
-
-
- 
-
-        
-    </div>
-    <script>
-        function searchVideos() {
-            let input = document.getElementById('searchInput').value.toLowerCase();
-            let videoCards = document.getElementsByClassName('video-card');
-            let titles = document.getElementsByClassName('title');
-
-            for (let i = 0; i < videoCards.length; i++) {
-                let title = titles[i].innerText.toLowerCase();
-                if (title.includes(input)) {
-                    videoCards[i].classList.remove('hidden');
-                } else {
-                    videoCards[i].classList.add('hidden');
-                }
-            }
-        }
-    </script>
-
-
+        <a target="_blank" href="https://www.youtube.com/@ltpcalculator">Credit</a>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <h3><p>Welcome to My Website! Here, you’ll find a wealth of trading information and resources to help you navigate the dynamic world of trading. Whether you’re a seasoned investor or just starting out, our comprehensive guides, market analysis, and expert insights will empower you to make informed decisions. Join us on this journey to enhance your trading knowledge and skills!</p></h3>
+        </section>
+
+       
+
+       
+    </main>
+
+    <footer>
+        <p>&copy; Website Made By SARTHAKGAMERVI</p>
+    </footer>
 </body>
-
 </html>
